@@ -1,0 +1,339 @@
+
+student@M100311 MINGW64 ~
+$ cd /c/Users/student/Desktop/project
+
+student@M100311 MINGW64 ~/Desktop/project
+$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+
+
+student@M100311 MINGW64 ~/Desktop/project
+$ git config --global user.name "flight0742"
+
+student@M100311 MINGW64 ~/Desktop/project
+$ git config --global user.email flight0742@gmail.com
+
+student@M100311 MINGW64 ~/Desktop/project
+$ git init
+Initialized empty Git repository in C:/Users/student/Desktop/project/.git/
+
+student@M100311 MINGW64 ~/Desktop/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        bookmarks.html
+        css/
+        images/
+        index.html
+        js/
+        main.html
+        media/
+        position.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+student@M100311 MINGW64 ~/Desktop/project (master)
+$ git add *
+warning: LF will be replaced by CRLF in bookmarks.html.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in css/font/fontello.svg.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in css/fonts.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in css/images/logo_l.svg.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in css/images/logo_m.svg.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in css/normalize.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in css/reset.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in css/stylesheet.css.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in js/jquery.min.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in js/webcafe.js.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in main.html.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in media/google-developer-stories-subtitles-en.vtt.
+The file will have its original line endings in your working directory.
+
+student@M100311 MINGW64 ~/Desktop/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   bookmarks.html
+        new file:   css/font/eot/NotoSansKR-Black-Hestia.eot
+        new file:   css/font/eot/NotoSansKR-Bold-Hestia.eot
+        new file:   css/font/eot/NotoSansKR-DemiLight-Hestia.eot
+        new file:   css/font/eot/NotoSansKR-Light-Hestia.eot
+        new file:   css/font/eot/NotoSansKR-Medium-Hestia.eot
+        new file:   css/font/eot/NotoSansKR-Regular-Hestia.eot
+        new file:   css/font/eot/NotoSansKR-Thin-Hestia.eot
+        new file:   css/font/fontello.eot
+        new file:   css/font/fontello.svg
+        new file:   css/font/fontello.ttf
+        new file:   css/font/fontello.woff
+        new file:   css/font/fontello.woff2
+        new file:   css/font/otf/NotoSansKR-Black-Hestia.otf
+        new file:   css/font/otf/NotoSansKR-Bold-Hestia.otf
+        new file:   css/font/otf/NotoSansKR-DemiLight-Hestia.otf
+        new file:   css/font/otf/NotoSansKR-Light-Hestia.otf
+        new file:   css/font/otf/NotoSansKR-Medium-Hestia.otf
+        new file:   css/font/otf/NotoSansKR-Regular-Hestia.otf
+        new file:   css/font/otf/NotoSansKR-Thin-Hestia.otf
+        new file:   css/font/woff/NotoSansKR-Black-Hestia.woff
+        new file:   css/font/woff/NotoSansKR-Bold-Hestia.woff
+        new file:   css/font/woff/NotoSansKR-DemiLight-Hestia.woff
+        new file:   css/font/woff/NotoSansKR-Light-Hestia.woff
+        new file:   css/font/woff/NotoSansKR-Medium-Hestia.woff
+        new file:   css/font/woff/NotoSansKR-Regular-Hestia.woff
+        new file:   css/font/woff/NotoSansKR-Thin-Hestia.woff
+        new file:   css/fonts.css
+        new file:   css/images/ani_flower_01.png
+        new file:   css/images/ani_flower_02.png
+        new file:   css/images/ani_flower_03.png
+        new file:   css/images/ani_flower_04.png
+        new file:   css/images/back_forward.png
+        new file:   css/images/backpage_forwardpage.png
+        new file:   css/images/bg_flower.png
+        new file:   css/images/btn_search.png
+        new file:   css/images/coffee.png
+        new file:   css/images/logo.png
+        new file:   css/images/logo_l.svg
+        new file:   css/images/logo_m.svg
+        new file:   css/images/rank.png
+        new file:   css/images/sprite_bullet.png
+        new file:   css/images/sprite_footer.png
+        new file:   css/images/sprite_header.png
+        new file:   css/images/sprite_main.png
+        new file:   css/images/sprite_mobile_header.png
+        new file:   css/images/title.png
+        new file:   css/images/validation_icon.png
+        new file:   css/images/volume_off.png
+        new file:   css/images/volume_on.png
+        new file:   css/images/webcafe_video_logo.png
+        new file:   css/normalize.css
+        new file:   css/reset.css
+        new file:   css/style.css
+        new file:   css/stylesheet.css
+        new file:   images/book_rwd.jpg
+        new file:   images/common/apple-touch-icon.png
+        new file:   images/common/favicon.ico
+        new file:   images/common/webcafe.ico
+        new file:   images/common/webcafe.png
+        new file:   images/css3_logo.png
+        new file:   images/facebook.png
+        new file:   images/footer_logo.png
+        new file:   images/free_gift.gif
+        new file:   images/html5_logo.png
+        new file:   images/image-1x.png
+        new file:   images/image-2x.png
+        new file:   images/image-3x.png
+        new file:   images/image-4x.png
+        new file:   images/image-src.png
+        new file:   images/large.jpg
+        new file:   images/logo.png
+        new file:   images/medium.jpg
+        new file:   images/news.gif
+        new file:   images/normal.jpg
+        new file:   images/rwd-logo.png
+        new file:   images/rwd-normal.png
+        new file:   images/rwd_desktop.png
+        new file:   images/rwd_mobile.png
+        new file:   images/rwd_tablet.png
+        new file:   images/seulbinim.jpg
+        new file:   images/small.jpg
+        new file:   images/title.png
+        new file:   images/web_standards.gif
+        new file:   images/webcafe-logo.png
+        new file:   images/webcafe-logo@2x.png
+        new file:   index.html
+        new file:   js/jquery.min.js
+        new file:   js/main.js
+        new file:   js/webcafe.js
+        new file:   main.html
+        new file:   media/google-developer-stories-subtitles-en.vtt
+        new file:   media/google-developer-stories.mov
+        new file:   media/google-developer-stories.mp4
+        new file:   media/google-developer-stories.ogg
+        new file:   media/google-developer-stories.webm
+        new file:   media/poster.jpg
+        new file:   position.html
+
+
+student@M100311 MINGW64 ~/Desktop/project (master)
+$ git commit -m "반응형 웹사이트 예시"
+[master (root-commit) 58469b2] 반응형 웹사이트 예시
+ 98 files changed, 3560 insertions(+)
+ create mode 100644 bookmarks.html
+ create mode 100644 css/font/eot/NotoSansKR-Black-Hestia.eot
+ create mode 100644 css/font/eot/NotoSansKR-Bold-Hestia.eot
+ create mode 100644 css/font/eot/NotoSansKR-DemiLight-Hestia.eot
+ create mode 100644 css/font/eot/NotoSansKR-Light-Hestia.eot
+ create mode 100644 css/font/eot/NotoSansKR-Medium-Hestia.eot
+ create mode 100644 css/font/eot/NotoSansKR-Regular-Hestia.eot
+ create mode 100644 css/font/eot/NotoSansKR-Thin-Hestia.eot
+ create mode 100644 css/font/fontello.eot
+ create mode 100644 css/font/fontello.svg
+ create mode 100644 css/font/fontello.ttf
+ create mode 100644 css/font/fontello.woff
+ create mode 100644 css/font/fontello.woff2
+ create mode 100644 css/font/otf/NotoSansKR-Black-Hestia.otf
+ create mode 100644 css/font/otf/NotoSansKR-Bold-Hestia.otf
+ create mode 100644 css/font/otf/NotoSansKR-DemiLight-Hestia.otf
+ create mode 100644 css/font/otf/NotoSansKR-Light-Hestia.otf
+ create mode 100644 css/font/otf/NotoSansKR-Medium-Hestia.otf
+ create mode 100644 css/font/otf/NotoSansKR-Regular-Hestia.otf
+ create mode 100644 css/font/otf/NotoSansKR-Thin-Hestia.otf
+ create mode 100644 css/font/woff/NotoSansKR-Black-Hestia.woff
+ create mode 100644 css/font/woff/NotoSansKR-Bold-Hestia.woff
+ create mode 100644 css/font/woff/NotoSansKR-DemiLight-Hestia.woff
+ create mode 100644 css/font/woff/NotoSansKR-Light-Hestia.woff
+ create mode 100644 css/font/woff/NotoSansKR-Medium-Hestia.woff
+ create mode 100644 css/font/woff/NotoSansKR-Regular-Hestia.woff
+ create mode 100644 css/font/woff/NotoSansKR-Thin-Hestia.woff
+ create mode 100644 css/fonts.css
+ create mode 100644 css/images/ani_flower_01.png
+ create mode 100644 css/images/ani_flower_02.png
+ create mode 100644 css/images/ani_flower_03.png
+ create mode 100644 css/images/ani_flower_04.png
+ create mode 100644 css/images/back_forward.png
+ create mode 100644 css/images/backpage_forwardpage.png
+ create mode 100644 css/images/bg_flower.png
+ create mode 100644 css/images/btn_search.png
+ create mode 100644 css/images/coffee.png
+ create mode 100644 css/images/logo.png
+ create mode 100644 css/images/logo_l.svg
+ create mode 100644 css/images/logo_m.svg
+ create mode 100644 css/images/rank.png
+ create mode 100644 css/images/sprite_bullet.png
+ create mode 100644 css/images/sprite_footer.png
+ create mode 100644 css/images/sprite_header.png
+ create mode 100644 css/images/sprite_main.png
+ create mode 100644 css/images/sprite_mobile_header.png
+ create mode 100644 css/images/title.png
+ create mode 100644 css/images/validation_icon.png
+ create mode 100644 css/images/volume_off.png
+ create mode 100644 css/images/volume_on.png
+ create mode 100644 css/images/webcafe_video_logo.png
+ create mode 100644 css/normalize.css
+ create mode 100644 css/reset.css
+ create mode 100644 css/style.css
+ create mode 100644 css/stylesheet.css
+ create mode 100644 images/book_rwd.jpg
+ create mode 100644 images/common/apple-touch-icon.png
+ create mode 100644 images/common/favicon.ico
+ create mode 100644 images/common/webcafe.ico
+ create mode 100644 images/common/webcafe.png
+ create mode 100644 images/css3_logo.png
+ create mode 100644 images/facebook.png
+ create mode 100644 images/footer_logo.png
+ create mode 100644 images/free_gift.gif
+ create mode 100644 images/html5_logo.png
+ create mode 100644 images/image-1x.png
+ create mode 100644 images/image-2x.png
+ create mode 100644 images/image-3x.png
+ create mode 100644 images/image-4x.png
+ create mode 100644 images/image-src.png
+ create mode 100644 images/large.jpg
+ create mode 100644 images/logo.png
+ create mode 100644 images/medium.jpg
+ create mode 100644 images/news.gif
+ create mode 100644 images/normal.jpg
+ create mode 100644 images/rwd-logo.png
+ create mode 100644 images/rwd-normal.png
+ create mode 100644 images/rwd_desktop.png
+ create mode 100644 images/rwd_mobile.png
+ create mode 100644 images/rwd_tablet.png
+ create mode 100644 images/seulbinim.jpg
+ create mode 100644 images/small.jpg
+ create mode 100644 images/title.png
+ create mode 100644 images/web_standards.gif
+ create mode 100644 images/webcafe-logo.png
+ create mode 100644 images/webcafe-logo@2x.png
+ create mode 100644 index.html
+ create mode 100644 js/jquery.min.js
+ create mode 100644 js/main.js
+ create mode 100644 js/webcafe.js
+ create mode 100644 main.html
+ create mode 100644 media/google-developer-stories-subtitles-en.vtt
+ create mode 100644 media/google-developer-stories.mov
+ create mode 100644 media/google-developer-stories.mp4
+ create mode 100644 media/google-developer-stories.ogg
+ create mode 100644 media/google-developer-stories.webm
+ create mode 100644 media/poster.jpg
+ create mode 100644 position.html
+
+student@M100311 MINGW64 ~/Desktop/project (master)
+$ git log
+commit 58469b2f5a7c65af6d33b799164fc7d47273d3f3 (HEAD -> master)
+Author: flight0742 <flight0742@gmail.com>
+Date:   Wed Dec 6 15:56:21 2017 +0900
+
+    반응형 웹사이트 예시
+
+student@M100311 MINGW64 ~/Desktop/project (master)
+$ git remote add origin https://github.com/Flight0742/responsive.git
+
+student@M100311 MINGW64 ~/Desktop/project (master)
+$ git remote
+origin
+
+student@M100311 MINGW64 ~/Desktop/project (master)
+$ git push origin master
+Username for 'https://github.com': flight0742
+Counting objects: 107, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (107/107), done.
+Writing objects:  29% (32/107), 4.37 MiB | 28.00 KiB/s
+
+
+
+
